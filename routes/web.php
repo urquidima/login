@@ -22,3 +22,7 @@ Route::post('/valida','Practica@validarLogin');
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/usuarios','LoginController@index');
+Route::get('/nuevousuario','LoginController@create');
+Route::post('/altausuario','LoginController@save');
